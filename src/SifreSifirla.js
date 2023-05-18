@@ -9,7 +9,7 @@ function SifreSifirla() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Login/>}></Route>
-      <Route path='/SifreSifirla' element={<SifreSifirla/>}></Route>
+      <Route path='/' element={<SifreSifirla/>}></Route>
     </Routes>
     
     </BrowserRouter>
@@ -18,13 +18,10 @@ function SifreSifirla() {
 
     const navigateToHome = () => {
         // 👇️ navigate to /contacts
-        navigate('/Login');
+        navigate('/?');
       };
 
   return (
-
-
-
 
     <div className='d-flex justify-content-center align-items-center bg-primary vh-100'>
         <div className='bg-white p-3 rounded w-25'>

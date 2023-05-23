@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Link, NavLink ,useNavigate} from 'react-router-dom'
-import './girisOnay';
+import {useNavigate} from 'react-router-dom'
+import   validation from './girisOnay';
  
 
 
@@ -17,11 +17,8 @@ function Login() {
     }
     const handleSubmit =(event) => {
         event.preventDefault();
-        setValues(validation(values))
+        setErrors(validation(values))
     }
-
-
-
 
     const navigate = useNavigate();
 
@@ -38,12 +35,14 @@ function Login() {
             <h2>Yaz Okulu Öğrenci Bilgilendirme Sistemi</h2>
             <form action="" onSubmit={handleSubmit}>
                 <div className='mb-3'>
-                    <label htmlFor="Öğr No."> <strong> Öğrenci Numarası </strong> </label>
+                    <label htmlFor="ogrID"> <strong> Öğrenci Numarası </strong> </label>
                     <input type="integer" placeholder='Öğrenci Numarası' onChange={handleInput} className='form-control rounded-0' name='ogrID'/>
+                    {errors.ogrID && <span className='text-danger'> {errors.ogrID} </span> }
                 </div>
                 <div className='mb-3'>
-                    <label htmlFor="password"> <strong> Şifre </strong> </label>
+                    <label htmlFor="sifre"> <strong> Şifre </strong> </label>
                     <input type="password" placeholder='Şifre' onChange={handleInput} className='form-control rounded-0' name='sifre'/>
+                    {errors.sifre && <span className='text-danger'> {errors.sifre} </span> }
                 </div>
                 <button className='btn btn-succes w-100 rounded-100 '> <strong> Giriş Yap </strong> </button>
                 <p></p>

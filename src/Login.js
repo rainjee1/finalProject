@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {useNavigate} from 'react-router-dom'
 import   validation from './girisOnay';
- 
+import axios from 'axios';
 
 
 function Login() {  
@@ -18,6 +18,18 @@ function Login() {
     const handleSubmit =(event) => {
         event.preventDefault();
         setErrors(validation(values))
+        if(errors.ogrNo === "" && errors.sifre===  ""){
+            axios.post('http://localhost:8081/ogrenci' ,values)
+            .then(res => {
+                if(res.data === "Succes"){
+                    navigate('/home');
+                }
+                else
+                alert("Böyle bir öğrenci kaydı bulunmamaktadır.")
+                
+            })
+            .catch(err => console.log(err));
+    }
     }
 
     const navigate = useNavigate();
@@ -35,9 +47,9 @@ function Login() {
             <h2>Yaz Okulu Öğrenci Bilgilendirme Sistemi</h2>
             <form action="" onSubmit={handleSubmit}>
                 <div className='mb-3'>
-                    <label htmlFor="ogrID"> <strong> Öğrenci Numarası </strong> </label>
-                    <input type="integer" placeholder='Öğrenci Numarası' onChange={handleInput} className='form-control rounded-0' name='ogrID'/>
-                    {errors.ogrID && <span className='text-danger'> {errors.ogrID} </span> }
+                    <label htmlFor="ogrNo"> <strong> Öğrenci Numarası </strong> </label>
+                    <input type="integer" placeholder='Öğrenci Numarası' onChange={handleInput} className='form-control rounded-0' name='ogrNo'/>
+                    {errors.ogrNo && <span className='text-danger'> {errors.ogrNo} </span> }
                 </div>
                 <div className='mb-3'>
                     <label htmlFor="sifre"> <strong> Şifre </strong> </label>

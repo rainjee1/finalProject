@@ -2,22 +2,22 @@
 function validation(values){
     
     let error = {}
-     const ogrID_pattern=/^(?=.*[0-9])$/
+     const ogrNo_pattern=/^(?=.*[0-9])$/
      const email_pattern=/^[^\s@]+@[^\s@]+\[^\s@] +$/
      const sifre_pattern= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/
      const sifre2_pattern= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/
         
 
-     if(values.ogrID=== ""){
-        error.ogrID="Öğrenci Nummarası boş olamaz."
+     if(values.ogrNo=== ""){
+        error.ogrNo="Öğrenci Nummarası boş olamaz."
 
      }
 
-     else if(!ogrID_pattern.test(values.ogrID)) {
-        error.ogrID="Böyle bir öğrenci bulunmamaktadır"
+     else if(!ogrNo_pattern.test(values.ogrNo)) {
+        error.ogrNo="Böyle bir öğrenci bulunmamaktadır"
      }
      else{
-        error.ogrID=""
+        error.ogrNo=""
      } 
 
      if(values.email=== ""){
@@ -25,7 +25,7 @@ function validation(values){
 
    }
 
-   else if(!email_pattern.test(values.ogrID)) {
+   else if(!email_pattern.test(values.ogrNo)) {
       error.email="Böyle bir öğrenci bulunmamaktadır"
    }
    else{

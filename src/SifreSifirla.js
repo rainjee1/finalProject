@@ -3,7 +3,7 @@ import Login from './Login';
 import { useNavigate} from 'react-router-dom';
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import   validation from './girisOnay';
-import axios from 'axios';
+import axios from "axios";
 
 
 

@@ -18,7 +18,7 @@ function Login() {
           })
           .catch((error) => {
             console.log(error);
-            alert("Yanlış Şifre veya Yanlış Mail");
+            alert("Yanlış şifre veya hatalı parola");
             
           });
       };

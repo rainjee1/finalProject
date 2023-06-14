@@ -1,8 +1,9 @@
 import React from 'react';
 import Login from './Login';
 import SifreSifirla from "./SifreSifirla"
-import home from './home';
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import home from "./home";
+
 
 
 function App() {

@@ -6,7 +6,7 @@ function validation(values){
      const email_pattern=/^[^\s@]+@[^\s@]+\[^\s@] +$/
      const sifre_pattern= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/
      const sifre2_pattern= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/
-        
+      
 
      if(values.ogrNo=== ""){
         error.ogrNo="Öğrenci Nummarası boş olamaz."

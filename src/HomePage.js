@@ -6,6 +6,8 @@ import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 
 function HomePage()
 {
+      
+
   const navigate= useNavigate();
   return <SideNav
    onSelect={selected => {
@@ -35,8 +37,8 @@ function HomePage()
       <NavItem eventKey="Ayarlar">
         <NavIcon><i className='fa-thin fa-note' style={{fontSize:"1.5em"}}/></NavIcon>
         <NavText>Ayarlar</NavText>
-        <NavItem eventKey="Kullanici Bilgileri">
-          <NavText>Kullanici Bilgileri</NavText>
+        <NavItem eventKey="Kullanici">
+          <NavText>Kullanici</NavText>
         </NavItem>
         <NavItem eventKey="Sifre Guncelle"> 
           <NavText>Sifre Guncelle</NavText>

@@ -14,7 +14,7 @@ function Login() {
         signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
             console.log(userCredential);
-            navigate('/home');
+            navigate('/HomePage');
           })
           .catch((error) => {
             console.log(error);

@@ -4,6 +4,7 @@ import { auth } from "./firebase";
 import { signInWithEmailAndPassword } from "firebase/auth"
 
 
+
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -15,6 +16,7 @@ function Login() {
           .then((userCredential) => {
             console.log(userCredential);
             navigate('/HomePage');
+          
           })
           .catch((error) => {
             console.log(error);

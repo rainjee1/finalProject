@@ -1,7 +1,8 @@
 import SideNav, {Toggle, NavItem, NavIcon, NavText} from '@trendmicro/react-sidenav'
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import { useNavigate } from 'react-router-dom';
-function Duyurular() {
+function Notlarim() {
+
     const navigate= useNavigate();
     return    <SideNav
        onSelect={selected => {
@@ -11,7 +12,7 @@ function Duyurular() {
         
        >  
          <SideNav.Toggle />
-          <SideNav.Nav defaultSelected="Duyurular">
+          <SideNav.Nav defaultSelected="Notlar">
           <NavItem eventKey="HomePage">
             <NavIcon><i className='fa-solid fa-house' style={{fontSize:"1.5em"}}/></NavIcon>
             <NavText>Anasayfa</NavText>
@@ -43,4 +44,4 @@ function Duyurular() {
         </SideNav>
 }
 
-export default Duyurular;
+export default Notlarim;

@@ -6,19 +6,18 @@ import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 
 function HomePage()
 {
-      
 
   const navigate= useNavigate();
-  return <SideNav
+ return  <SideNav
    onSelect={selected => {
        console.log(selected)
        navigate('/'+selected)
    }} 
     
    >  
-    <SideNav.Toggle />
-    <SideNav.Nav defaultSelected="home">
-      <NavItem eventKey="home">
+     <SideNav.Toggle />
+      <SideNav.Nav defaultSelected="HomePage">
+      <NavItem eventKey="HomePage">
         <NavIcon><i className='fa-solid fa-house' style={{fontSize:"1.5em"}}/></NavIcon>
         <NavText>Anasayfa</NavText>
       </NavItem>
@@ -40,7 +39,7 @@ function HomePage()
         <NavItem eventKey="Kullanici">
           <NavText>Kullanici</NavText>
         </NavItem>
-        <NavItem eventKey="Sifre Guncelle"> 
+        <NavItem eventKey="SifreSifirla"> 
           <NavText>Sifre Guncelle</NavText>
         </NavItem>
       </NavItem>

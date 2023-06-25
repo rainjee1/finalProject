@@ -4,11 +4,10 @@ export default function Navbar() {
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        Iskenderun Teknık Unıversıtesı
       </Link>
       <ul>
-        <CustomLink to="./Pages/HomePage.js">Pricing</CustomLink>
-        <CustomLink to="/about">About</CustomLink>
+        <CustomLink to="/HomePage">Anasayfa</CustomLink>
+        <CustomLink to="/?">Guvenli Cikis</CustomLink>
       </ul>
     </nav>
   )

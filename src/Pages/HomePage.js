@@ -50,7 +50,9 @@ function HomePage()
     </SideNav.Nav>
 
     </SideNav>
-  
+   
+   
+   
  )
 
 } 

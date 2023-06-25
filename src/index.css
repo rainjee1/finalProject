@@ -60,6 +60,9 @@ a {
   align-items: center;
   padding: .25rem;
 }
+.nav li.visited{
+  color: seagreen;
+}
 
 .nav li.active {
   background-color: #db3838;
@@ -70,7 +73,7 @@ a {
 }
 .nav li:hover {
   background-color: #db3838;
-  color: seagreen;
+  color: darkgoldenrod;
 }
 
 .App-header {

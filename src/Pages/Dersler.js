@@ -1,10 +1,10 @@
-import SideNav, {Toggle, NavItem, NavIcon, NavText} from '@trendmicro/react-sidenav'
+
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import { useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell, faBook, faHome, faNoteSticky, faUserGear } from '@fortawesome/free-solid-svg-icons';
+
 import SideBar from '../SideBar';
 import Navbar from '../Navbar';
+import { CFormSelect } from "@coreui/react";
 
 function Dersler() {
     const navigate= useNavigate();
@@ -12,6 +12,7 @@ function Dersler() {
       <div>
         <SideBar></SideBar>
         <Navbar></Navbar>
+
       </div>
     )   
 }

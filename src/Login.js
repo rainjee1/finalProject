@@ -46,7 +46,7 @@ function Login() {
           </div>
           <div className='mb-3'>
             <label htmlFor="sifre"><strong>Şifre</strong></label>
-            <input type="password"  placeholder='Şifre' value={password} onChange={e => setPassword(e.target.value)} className='form-control rounded-0' name='sifre' />
+            <input type="password" class="form-control" autocomplete="current-password" placeholder='Şifre' value={password} onChange={e => setPassword(e.target.value)} className='form-control rounded-0' name='sifre' />
       
           </div>
           <button onClick={handleLogin}  className='btn btn-success w-100 rounded-100'><strong>Giriş Yap</strong></button>

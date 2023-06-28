@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,10 +12,9 @@ code {
     monospace;
 }
 
-a {
-  color: hotpink;
+.sayfa{
+  margin: auto;
 }
-
 .SideNav {
   background-color: royalblue !important;
 }
@@ -30,15 +29,51 @@ a {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+.txtbck{
+  background-color:cornflowerblue ;
+}
 .nav {
-  background-color: #db3838;
+  background-color: royalblue;
   color: white;
-  display: flex;
+  display: block;
+  box-sizing: border-box;
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
+  height: 1.25cm;
 }
+
+.s{
+  left: 16cm;
+  bottom: 4.32cm;
+  background-color:cornflowerblue ;
+}
+
+.ogrenim{
+  left:27cm;
+  bottom: 6.5cm;
+}
+
+.crd{
+  left: 5cm;
+  background-color: cornflowerblue;
+}
+
+.crr{
+  background-color: cornflowerblue;
+}
+
+.card{
+  background-color: aqua;
+  
+}
+
+.selectlist{
+  left: 16cm;
+}
+
 
 .site-title {
   font-size: 2rem;
@@ -64,15 +99,36 @@ a {
   color: seagreen;
 }
 
+.sidebar{
+  background-color: royalblue;
+  margin: auto;
+}
+
+
+
+.content{
+  margin: auto;
+}
+
+.duyuru {
+  
+  margin-left: auto;
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+  flex: auto;
+
+}
+
 .nav li.active {
-  background-color: #db3838;
+  background-color: royalblue;
   
 }
 .nav li.color{
-  color: #db3838;
+  color: white;
 }
 .nav li:hover {
-  background-color: #db3838;
+  background-color: white;
   color: darkgoldenrod;
 }
 

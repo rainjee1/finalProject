@@ -34,6 +34,11 @@
   gap: 1rem;
 }
 
+.duyuru {
+  color: seagreen;
+  width: fit-content;
+}
+
 .nav a {
   color: inherit;
   text-decoration: none;

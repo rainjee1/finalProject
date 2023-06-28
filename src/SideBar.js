@@ -11,7 +11,7 @@ import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 function SideBar()
 {
   const navigate= useNavigate();
- return  ( <SideNav
+ return  ( <div class="sidebar sidebar-fixed siderbar-narrow-unfoldable"> <SideNav className="sidebar"
    onSelect={selected => {
        console.log(selected)
        navigate('/'+selected)
@@ -51,7 +51,7 @@ function SideBar()
 
     </SideNav>
 
-    
+    </div>
    
    
    

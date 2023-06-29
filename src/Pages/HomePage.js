@@ -6,7 +6,7 @@ import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import Navbar from '../Navbar';
 import SideBar from '../SideBar';
 
-import { CCard, CAlert,CCardImage,CCardBody, CButton, CCardTitle, CCardText } from '@coreui/react';
+import { CCard, CAlert,CCardImage,CCardBody, CButton, CCardTitle, CCardText, CSidebar } from '@coreui/react';
 
 function HomePage()
 {
@@ -14,7 +14,6 @@ function HomePage()
  return  (
   <div class="content" className='sayfa'>
   
-    
     <SideBar></SideBar>
     <Navbar></Navbar>
     <div class="MuiPaper-root-app-page-title MuiPaper-elevation-2" className='duyuru'>

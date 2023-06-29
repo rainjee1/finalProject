@@ -4,19 +4,32 @@ import { useNavigate } from 'react-router-dom';
 
 import SideBar from '../SideBar';
 import Navbar from '../Navbar';
-import { CFormSelect } from "@coreui/react";
+import { CToast,CToastBody,CToastHeader} from "@coreui/react";
 function Duyurular() {
     const navigate= useNavigate();
     return    (
-      <div>
-        <SideBar></SideBar>
+      <div className="page" class='sidebar sidebar-fixed'>
+        <SideBar ></SideBar>
         <Navbar></Navbar>
-        <CFormSelect size="sm" aria-label="Default select example" className='selectlist'>
-  <option>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3" disabled>Three</option>
-</CFormSelect>
+        <CToast autohide={false} visible={true} className="toast">
+  <CToastHeader closeButton> 
+    <svg
+      className="rounded me-2"
+      width="20"
+      height="20"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid slice"
+      focusable="false"
+      role="img"
+    >
+      <rect width="100%" height="100%" fill="#007aff"></rect>
+    </svg>
+    <div className="fw-bold me-auto">Yaz Okulu Otomasyonu</div>
+    <small>Bir süre önce
+    </small>
+  </CToastHeader>
+  <CToastBody>Henüz bir duyuru yayınlanmamıştır.</CToastBody>
+</CToast>
       </div>
     )   
 }

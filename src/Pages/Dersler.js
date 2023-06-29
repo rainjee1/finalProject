@@ -4,7 +4,10 @@ import { useNavigate } from 'react-router-dom';
 
 import SideBar from '../SideBar';
 import Navbar from '../Navbar';
-import { CFormSelect } from "@coreui/react";
+
+import MyComponent from "../Data";
+
+
 
 function Dersler() {
     const navigate= useNavigate();
@@ -12,6 +15,8 @@ function Dersler() {
       <div>
         <SideBar></SideBar>
         <Navbar></Navbar>
+      
+      
 
       </div>
     )   

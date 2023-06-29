@@ -5,6 +5,7 @@ import { faBell, faBook, faHome, faNoteSticky, faUserGear } from '@fortawesome/f
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SideBar from '../SideBar';
 import Navbar from '../Navbar';
+import MyComponent from '../Data';
 function Notlarim() {
 
     const navigate= useNavigate();
@@ -12,6 +13,7 @@ function Notlarim() {
       <div>
         <SideBar></SideBar>
         <Navbar></Navbar>
+        <MyComponent></MyComponent>
       </div>
     )   
 }

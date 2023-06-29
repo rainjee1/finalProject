@@ -1,6 +1,6 @@
 import React from 'react'
 import SideNav, {Toggle, NavItem, NavIcon, NavText} from '@trendmicro/react-sidenav'
-
+import useState from 'react'
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faBook, faHome, faNoteSticky, faUserGear } from '@fortawesome/free-solid-svg-icons';
@@ -9,17 +9,19 @@ import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 
 
 function SideBar()
-{
+{ 
+ 
   const navigate= useNavigate();
- return  ( <div class="sidebar sidebar-fixed siderbar-narrow-unfoldable"> <SideNav className="sidebar"
+ return  (
+  <div > <div class="sidebar sidebar-fixed hide"> <SideNav className="sidebar"
    onSelect={selected => {
        console.log(selected)
        navigate('/'+selected)
    }} 
     
-   >,   
+   > 
    
-     <SideNav.Toggle />
+     <SideNav.Toggle componentClass='button' expanded />
       <SideNav.Nav defaultSelected='selected'>
       <NavItem eventKey="HomePage">
         <NavIcon><FontAwesomeIcon icon={faHome}/></NavIcon>
@@ -52,7 +54,7 @@ function SideBar()
     </SideNav>
 
     </div>
-   
+    </div>
    
    
  )

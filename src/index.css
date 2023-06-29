@@ -29,6 +29,11 @@ code {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.data{
+  text-align: right;
+  display: inline;
+  align-items: center;
+}
 
 .txtbck{
   background-color:cornflowerblue ;
@@ -55,6 +60,14 @@ code {
   left:27cm;
   bottom: 6.5cm;
 }
+.toast{
+  background-color: rgb(226, 226, 226);
+  position: static;
+  box-sizing: border-box;
+  display: block;
+  left: auto;
+  text-align-last: center;
+}
 
 .crd{
   left: 5cm;
@@ -70,9 +83,7 @@ code {
   
 }
 
-.selectlist{
-  left: 16cm;
-}
+
 
 
 .site-title {
@@ -102,6 +113,7 @@ code {
 .sidebar{
   background-color: royalblue;
   margin: auto;
+  display:inline;
 }
 
 
@@ -148,7 +160,7 @@ code {
 }
 
 .page {
-  text-align: center;
+  margin-right: 20;
 }
 
 @keyframes App-logo-spin {
@@ -161,4 +173,3 @@ code {
   
 }
 
-  

@@ -8,7 +8,7 @@ import Dersler from './Pages/Dersler';
 import Duyurular from './Pages/Duyurular';
 import Kullanici from './Pages/Kullanici';
 import Notlar from './Pages/Notlar';
-import Navbar from './Navbar';
+
 
 
 

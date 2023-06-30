@@ -8,12 +8,14 @@ import Dersler from './Pages/Dersler';
 import Duyurular from './Pages/Duyurular';
 import Kullanici from './Pages/Kullanici';
 import Notlar from './Pages/Notlar';
+import Dosya from './Pages/Dosya';
+import "./index.css";
 
 
 
 
 function App() {
-  return (
+  return ( <div class="root">
     <BrowserRouter>
     
     <Routes>
@@ -25,9 +27,11 @@ function App() {
       <Route path='/Duyurular' element={<Duyurular/>}></Route>
       <Route path='/Kullanici' element={<Kullanici/>}></Route>
       <Route path='/Notlar' element={<Notlar/>}></Route>
+      <Route path='/Dosya' element={<Dosya/>}/>
     </Routes>
     
     </BrowserRouter>
+    </div>
   );
 }
 

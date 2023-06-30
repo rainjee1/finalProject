@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
       <>
         <CNavbar expand="lg" colorScheme="light" className="bg-light">
-          <CContainer fluid>
+          <CContainer fluid> 
             <CNavbarToggler
               aria-label="Toggle navigation"
               aria-expanded={visible}

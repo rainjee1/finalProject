@@ -9,12 +9,13 @@ import MyComponent from '../Data';
 function Notlarim() {
 
     const navigate= useNavigate();
-    return    (
+    return    ( <main>
       <div>
         <SideBar></SideBar>
         <Navbar></Navbar>
         <MyComponent></MyComponent>
       </div>
+      </main>
     )   
 }
 

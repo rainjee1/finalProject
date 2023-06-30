@@ -3,7 +3,7 @@ import SideNav, {Toggle, NavItem, NavIcon, NavText} from '@trendmicro/react-side
 import useState from 'react'
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell, faBook, faHome, faNoteSticky, faUserGear } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faBook, faFileArchive, faHome, faNoteSticky, faUserGear } from '@fortawesome/free-solid-svg-icons';
 
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 
@@ -12,8 +12,9 @@ function SideBar()
 { 
  
   const navigate= useNavigate();
- return  (
-  <div > <div class="sidebar sidebar-fixed hide"> <SideNav className="sidebar"
+ return  ( <>
+  <div class='wrapper d-flex flex-column min-vh-100'>
+     <div> <SideNav className="sidebar"  position='sticky'
    onSelect={selected => {
        console.log(selected)
        navigate('/'+selected)
@@ -21,7 +22,7 @@ function SideBar()
     
    > 
    
-     <SideNav.Toggle componentClass='button' expanded />
+     <SideNav.Toggle   /> 
       <SideNav.Nav defaultSelected='selected'>
       <NavItem eventKey="HomePage">
         <NavIcon><FontAwesomeIcon icon={faHome}/></NavIcon>
@@ -38,6 +39,10 @@ function SideBar()
       <NavItem eventKey="Duyurular">
         <NavIcon><FontAwesomeIcon icon={faBell}/></NavIcon>
         <NavText>Duyurular</NavText>
+      </NavItem>
+      <NavItem eventKey="Dosya">
+        <NavIcon><FontAwesomeIcon icon={faFileArchive}/></NavIcon>
+        <NavText>Belge Yükleme</NavText>
       </NavItem>
       <NavItem eventKey="Ayarlar">
         <NavIcon><FontAwesomeIcon icon={faUserGear}/></NavIcon>
@@ -56,7 +61,7 @@ function SideBar()
     </div>
     </div>
    
-   
+   </>
  )
 
 } 

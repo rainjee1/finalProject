@@ -15,7 +15,7 @@ function HomePage()
   <div class="content" className='sayfa'>
   
     <SideBar></SideBar>
-    <Navbar></Navbar>
+   
     <div class="MuiPaper-root-app-page-title MuiPaper-elevation-2" className='duyuru'>
       <div>
         <div class="app-page-title--first">

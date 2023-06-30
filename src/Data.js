@@ -1,60 +1,53 @@
-import { CTable, CTableBody, CTableDataCell, CTableHead, CTableHeaderCell, CTableRow } from '@coreui/react';
 
+import React,{ useEffect, useState } from "react";
 
-const columns = [
-    {
-        name: 'Title',
-        selector: row => row.title,
-    },
-    {
-        name: 'Year',
-        selector: row => row.year,
-    },
-];
-
-const data = [
-    {
-        id: 1,
-        title: 'Beetlejuice',
-        year: '1988',
-    },
-    {
-        id: 2,
-        title: 'Ghostbusters',
-        year: '1984',
-    },
-]
 
  export default function MyComponent() {
+
+  const [userData, setUserdata]= useState([]); 
+  useEffect( ()=>{
+      const getUserdata= async()=>{
+          const reqData= await fetch("http://localhost:3306/api/notlar");
+          const resData= await reqData.json();
+          setUserdata(resData);
+         // console.log(resData);
+      }
+      getUserdata();
+  },[]);
+
+
+
+
+
     return (
-        <CTable color='success'>
-        <CTableHead>
-          <CTableRow>
-            <CTableHeaderCell scope="col">#</CTableHeaderCell>
-            <CTableHeaderCell scope="col">Ders</CTableHeaderCell>
-            <CTableHeaderCell scope="col">Vize</CTableHeaderCell>
-            <CTableHeaderCell scope="col">Final</CTableHeaderCell>
-          </CTableRow>
-        </CTableHead>
-        <CTableBody>
-          <CTableRow>
-            <CTableHeaderCell scope="row">1</CTableHeaderCell>
-            <CTableDataCell>Mark</CTableDataCell>
-            <CTableDataCell>Otto</CTableDataCell>
-            <CTableDataCell>@mdo</CTableDataCell>
-          </CTableRow>
-          <CTableRow>
-            <CTableHeaderCell scope="row">2</CTableHeaderCell>
-            <CTableDataCell>Jacob</CTableDataCell>
-            <CTableDataCell>Thornton</CTableDataCell>
-            <CTableDataCell>@fat</CTableDataCell>
-          </CTableRow>
-          <CTableRow>
-            <CTableHeaderCell scope="row">3</CTableHeaderCell>
-            <CTableDataCell colSpan={2}>Larry the Bird</CTableDataCell>
-            <CTableDataCell>@twitter</CTableDataCell>
-          </CTableRow>
-        </CTableBody>
-      </CTable>
+      <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Ders No</th>
+          <th scope="col">Ders</th>
+          <th scope="col">Vize</th>
+          <th scope="col">Final</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
     );
 };

@@ -56,6 +56,11 @@ code {
   background-color:cornflowerblue ;
 }
 
+
+.box{
+  background-color: cornflowerblue;
+}
+
 .ogrenim{
   left:27cm;
   bottom: 6.5cm;
@@ -94,13 +99,17 @@ code {
 
 .sidebar{
   background-color: royalblue;
-  margin: auto;
-  display:block;
-  outline-offset: 5cm;
-  float: right;
+ 
+ 
+  
+}
+.bttn{
+  right: 2cm;
 }
 
-
+.divider{
+  background-color: cornflowerblue;
+}
 
 .content{
   margin: auto;
@@ -114,6 +123,17 @@ code {
   display: block;
   flex: auto;
 
+}
+
+
+.tool{
+  background-color: royalblue;
+}
+
+
+
+.drawerhd{
+ background-color: royalblue;
 }
 
 .nav li.active {

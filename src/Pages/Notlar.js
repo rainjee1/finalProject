@@ -8,14 +8,18 @@ import Navbar from '../Navbar';
 import MyComponent from '../Data';
 function Notlarim() {
 
+
+    
+
+
     const navigate= useNavigate();
-    return    ( <main>
+    return    ( 
       <div>
-        <SideBar></SideBar>
-        <Navbar></Navbar>
-        <MyComponent></MyComponent>
+      <SideBar></SideBar>
+      <MyComponent></MyComponent>
+
       </div>
-      </main>
+   
     )   
 }
 

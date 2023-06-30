@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import SideBar from '../SideBar';
 import Navbar from '../Navbar';
 
-import MyComponent from "../Data";
+
+import TableComponent from "../Data";
 
 
 
@@ -14,7 +15,9 @@ function Dersler() {
     return   (
       <div>
         <SideBar></SideBar>
-        <Navbar></Navbar>
+        
+        <TableComponent></TableComponent>
+        
       
       
 

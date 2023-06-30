@@ -15,7 +15,7 @@ function Dosya() {
         <Navbar></Navbar>
         <div className="mb-3">
             
-  <CFormInput type="file" id="formFileMultiple" label="Multiple files input example" multiple  className="file" name="file"/>
+  <CFormInput type="file" id="formFileMultiple" label="Lütfen gerekli evrakları seçip yükleyiniz." multiple  className="file" name="file.pdf"/>
 </div>
         
       </div>

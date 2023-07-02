@@ -1,7 +1,4 @@
 import React from 'react'
-
-
-
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import Navbar from '../Navbar';
 import SideBar from '../SideBar';

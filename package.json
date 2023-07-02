@@ -20,6 +20,8 @@
     "axios": "^0.24.0",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.0.0-alpha.6",
+    "firebase": "^9.23.0",
+    "firebase-admin": "^11.9.0",
     "react": "^18.2.0",
     "react-bootstrap": "^0.32.1",
     "react-data-grid": "^7.0.0-beta.34",

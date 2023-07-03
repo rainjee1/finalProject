@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 function Login() {
-   sconst [email, setEmail] = useState('');
+   const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
    
   
@@ -33,7 +33,7 @@ function Login() {
         
         try {
           const response = await axios.get('http://localhost:8081/ogrenci', { email, password });
-          console.log(response.data); // Giriş başarılıysa geri dönen verileri işleyebilirsiniz
+          console.log(response.data); 
         } catch (error) {
           console.error('Giriş hatası:', error);
         }

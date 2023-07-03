@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth } from "./firebase";
 import { signInWithEmailAndPassword } from "firebase/auth"
-
+import axios from 'axios';
 
 
 function Login() {
-    const [email, setEmail] = useState('');
+   sconst [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
    
   
@@ -23,9 +23,21 @@ function Login() {
             alert("Yanlış şifre veya hatalı parola");
             
           });
-      };
+      }; 
 
-
+  /*    const [email, setEmail] = useState('');
+      const [password, setPassword] = useState('');
+      
+      const handleLogin = async (e) => {
+        e.preventDefault();
+        
+        try {
+          const response = await axios.get('http://localhost:8081/ogrenci', { email, password });
+          console.log(response.data); // Giriş başarılıysa geri dönen verileri işleyebilirsiniz
+        } catch (error) {
+          console.error('Giriş hatası:', error);
+        }
+      }; */
       
 
 
@@ -67,7 +79,7 @@ export default Login;
 
 
 
-/* const [email, setEmail] = useState('');
+ /*const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 
 const handleLogin = async (e) => {
@@ -79,9 +91,6 @@ const handleLogin = async (e) => {
   } catch (error) {
     console.error('Giriş hatası:', error);
   }
-};
+}; */
 
-const navigate = useNavigate();
 
-const navigateToSifreSifirla = () => {
-  navigate('/sifreSifirla'); */

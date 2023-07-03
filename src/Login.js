@@ -25,6 +25,11 @@ function Login() {
           });
       };
 
+
+      
+
+
+
   const navigate = useNavigate();
 
   const navigateToSifreSifirla = () => {
@@ -59,3 +64,24 @@ function Login() {
 }
 
 export default Login;
+
+
+
+/* const [email, setEmail] = useState('');
+const [password, setPassword] = useState('');
+
+const handleLogin = async (e) => {
+  e.preventDefault();
+  
+  try {
+    const response = await axios.post('http://localhost:8081/ogrenci', { email, password });
+    console.log(response.data); // Giriş başarılıysa geri dönen verileri işleyebilirsiniz
+  } catch (error) {
+    console.error('Giriş hatası:', error);
+  }
+};
+
+const navigate = useNavigate();
+
+const navigateToSifreSifirla = () => {
+  navigate('/sifreSifirla'); */

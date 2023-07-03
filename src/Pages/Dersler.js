@@ -1,7 +1,11 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridSelectedRowCount, gridRowCountSelector, selectedGridRowsCountSelector } from '@mui/x-data-grid';
 import SideBar from '../SideBar';
+import Button from '@mui/material/Button';
+
+
+
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 90 },
@@ -19,7 +23,7 @@ const columns = [
   },
   {
     field: 'kota',
-    headerName: 'Kota',
+    headerName: 'Kontenjan',
     type: 'number',
     width: 110,
     editable: true,
@@ -48,6 +52,17 @@ const rows = [
 ];
 
 export default function DataGridDemo() {
+
+  const [selectedIds, setSelectedIds] = React.useState([]);
+
+  const handleSelectionChange = (selection) => {
+    setSelectedIds(selection.selectionModel);
+  };
+  
+  const isRowSelectable = (params) => {
+    return params.row.kota > 0 && selectedIds.length < 4;
+  };
+
   return (
    <div>
     <SideBar></SideBar>
@@ -64,11 +79,21 @@ export default function DataGridDemo() {
           },
         }}
         pageSizeOptions={[5]}
-        isRowSelectable={(param) => param.row.kota > 0}
+       
+        
         checkboxSelection
-        disableRowSelectionOnClick
+        disableSelectionOnClick
+        onSelectionModelChange={handleSelectionChange}
+        isRowSelectable={isRowSelectable}
+       
        
       />
-    </Box>  </div>
+    </Box> 
+    
+    <Button variant="contained" color="success">
+        Kaydı Gerçekleştir
+      </Button>
+    
+     </div>
   );
 }

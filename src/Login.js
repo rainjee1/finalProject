@@ -6,41 +6,37 @@ import axios from 'axios';
 
 
 function Login() {
-   const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-   
-  
-    const handleLogin = (e) => {
-        e.preventDefault();
-        signInWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
-            console.log(userCredential);
-            navigate('/HomePage');
-          
-          })
-          .catch((error) => {
-            console.log(error);
-            alert("Yanlış şifre veya hatalı parola");
-            
-          });
-      }; 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  /*    const [email, setEmail] = useState('');
-      const [password, setPassword] = useState('');
-      
-      const handleLogin = async (e) => {
-        e.preventDefault();
-        
-        try {
-          const response = await axios.get('http://localhost:8081/ogrenci', { email, password });
-          console.log(response.data); 
-        } catch (error) {
-          console.error('Giriş hatası:', error);
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    console.log(email, password);
+    fetch("http://localhost:27017/ogrenci", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "userRegister");
+        if (data.status == "ok") {
+          alert("login successful");
+          window.localStorage.setItem("token", data.data);
+          window.localStorage.setItem("loggedIn", true);
+
+          window.location.href = "./userDetails";
         }
-      }; */
-      
-
-
+      });
 
   const navigate = useNavigate();
 
@@ -74,7 +70,7 @@ function Login() {
     </div>
   );
 }
-
+}
 export default Login;
 
 

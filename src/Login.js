@@ -9,34 +9,17 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit(e) {
-    e.preventDefault();
 
-    console.log(email, password);
-    fetch("http://localhost:27017/ogrenci", {
-      method: "POST",
-      crossDomain: true,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data, "userRegister");
-        if (data.status == "ok") {
-          alert("login successful");
-          window.localStorage.setItem("token", data.data);
-          window.localStorage.setItem("loggedIn", true);
-
-          window.location.href = "./userDetails";
-        }
-      });
+    const handleLogin = async (e) => {
+      e.preventDefault();
+      
+      try {
+        const response = await axios.post('mongodb://127.0.0.1:27017/okul', { email, password });
+        console.log(response.data); // Giriş başarılıysa geri dönen verileri işleyebilirsiniz
+      } catch (error) {
+        console.error('Giriş hatası:', error);
+      }
+    }; 
 
   const navigate = useNavigate();
 
@@ -70,7 +53,7 @@ function Login() {
     </div>
   );
 }
-}
+
 export default Login;
 
 

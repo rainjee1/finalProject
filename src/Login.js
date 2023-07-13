@@ -3,23 +3,12 @@ import { useNavigate } from 'react-router-dom';
 
 
 const LoginForm = ({ onLogin }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  var email= req.body.username
+  var password=req.body.password
 
-     fetch(`${'mongodb+srv://new:014500@okull.b21fmkq.mongodb.net/'}/ogr`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json"
-      },
-      body: JSON.stringify({
-        ad, soyad, tags: tags.split(","), body
-      })
-    }).then(resp => resp.json());
-  };
 
+  
   const navigate = useNavigate();
 
   const navigateToSifreSifirla = () => {

@@ -1,15 +1,31 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-
-const LoginForm = ({ onLogin }) => {
-
-  var email= req.body.username
-  var password=req.body.password
-
-
+const Login = () => {
   
   const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [sifre, setPassword] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('/api/login', { email, sifre });
+      console.log(response.data);
+      const navigateHome = () => {
+        navigate('./Pages/HomePage');
+      };
+      // Başarılı giriş işlemi sonrası yönlendirme veya diğer işlemler burada yapılabilir
+    } catch (error) {
+      console.error(error.response.data);
+      // Hata durumunda uygun işlemler burada yapılabilir
+    }
+  };
+
+
+
 
   const navigateToSifreSifirla = () => {
     navigate('/sifreSifirla');
@@ -42,7 +58,7 @@ const LoginForm = ({ onLogin }) => {
   );
 }
 
-export default LoginForm;
+export default Login;
 
 
 
